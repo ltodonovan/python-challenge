@@ -29,18 +29,7 @@ with open(election_data_csv) as csvfile:
             winner = candidate
             winner_count = votes
             
-print("Election Results")
-("----------------------------")
-print(f"Total Votes: {total_votes}")
-print("----------------------------" )
-for candidate, votes in candidates.items():
-    candidate_votes = (votes / total_votes) * 100
-    print(f"{candidate}: {candidate_votes:.3f} % ({votes})")
-f"----------------------------\n" \
-f"Winner: {winner}\n" \
-f"----------------------------\n"
-
-
+#create analysis of election result data
 analysis = f"Election Results\n" \
 f"----------------------------\n" \
 f"Total Votes: {total_votes}\n" \
@@ -52,6 +41,9 @@ analysis += f"----------------------------\n" \
 f"Winner: {winner}\n" \
 f"----------------------------\n"
 
+print(analysis)
+
+#output the analysis results
 output_file = os.path.join("analysis", "analysis.txt")
 
 with open(output_file, "w") as file:

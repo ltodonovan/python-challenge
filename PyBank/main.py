@@ -49,6 +49,8 @@ f"Average Change: ${average_change}\n" \
 f"Greatest Increase in Profits: {greatest_increase[0]} ({greatest_increase[1]})\n" \
 f"Greatest Decrease in Profits: {greatest_decrease[0]} ({greatest_decrease[1]})"
 
+print(analysis)
+
 output_file = os.path.join("analysis", "analysis.txt")
 
 with open(output_file, "w") as file:
